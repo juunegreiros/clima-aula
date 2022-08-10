@@ -51,7 +51,7 @@ const Header: React.FC<{ theme: string; setTheme: (theme: string) => void }> = (
               </ExternalLink>
             </li>
             <li>
-              <ExternalLink href='https://www.linkedin.com/in/renansilva/' aria-label='linkedin'>
+              <ExternalLink href='https://www.linkedin.com/in/darumarts/' aria-label='linkedin'>
                 <IconWrapper>
                   <LinkedinLogo />
                 </IconWrapper>
@@ -59,8 +59,8 @@ const Header: React.FC<{ theme: string; setTheme: (theme: string) => void }> = (
             </li>
             <li>
               <ExternalLink
-                href='https://open.spotify.com/user/22lue2jtnvxx4fiwporbtf3dy'
-                aria-label='spotify'
+                href='https://www.behance.net/silvarenan'
+                aria-label='behance'
               >
                 <IconWrapper>
                   <BehanceLogo />
