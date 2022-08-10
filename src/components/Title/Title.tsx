@@ -3,6 +3,7 @@ import circle from '../../assets/circle.png';
 
 const Title = styled.h1`
   align-items: center;
+  align-self: center;
   background-image: url(${circle});
   background-repeat: no-repeat;
   display: flex;

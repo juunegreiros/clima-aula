@@ -44,14 +44,22 @@ const Header: React.FC<{ theme: string; setTheme: (theme: string) => void }> = (
         <nav>
           <List>
             <li>
-              <ExternalLink href='https://github.com/darumarts/' aria-label='github'>
+              <ExternalLink
+                href='https://github.com/darumarts/'
+                aria-label='github'
+                target='_blank'
+              >
                 <IconWrapper>
                   <GithubLogo />
                 </IconWrapper>
               </ExternalLink>
             </li>
             <li>
-              <ExternalLink href='https://www.linkedin.com/in/darumarts/' aria-label='linkedin'>
+              <ExternalLink
+                href='https://www.linkedin.com/in/darumarts/'
+                aria-label='linkedin'
+                target='_blank'
+              >
                 <IconWrapper>
                   <LinkedinLogo />
                 </IconWrapper>
@@ -61,6 +69,7 @@ const Header: React.FC<{ theme: string; setTheme: (theme: string) => void }> = (
               <ExternalLink
                 href='https://www.behance.net/silvarenan'
                 aria-label='behance'
+                target='_blank'
               >
                 <IconWrapper>
                   <BehanceLogo />
