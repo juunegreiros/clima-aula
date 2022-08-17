@@ -2,16 +2,11 @@ import styled from 'styled-components';
 import circle from '../../assets/circle.png';
 
 const Title = styled.h1`
-  align-items: center;
-  align-self: center;
-  background-image: url(${circle});
-  background-repeat: no-repeat;
-  display: flex;
-  font-size: 4rem;
-  font-weight: 600;
-  height: 125px;
-  padding-left: 40px;
+  color: ${({ theme }) => theme.colors.light};
+  font-size: 2.5rem;
+  font-weight: 500;
   text-align: center;
+  margin-bottom: 1.5rem;
 `;
 
 export default Title;

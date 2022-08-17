@@ -56,7 +56,8 @@ const GlobalStyle = createGlobalStyle<{ theme: ThemeTypes }>`
   }
 
   body {
-    background-color: ${({ theme }) => theme.colors.primary};
+    background-image: linear-gradient(${({ theme }) => theme.colors.orange}, ${({ theme }) =>
+  theme.colors.lightOrange});
     font-family: 'Rubik', sans-serif;
     color: ${({ theme }) => theme.colors.secondary};
     
