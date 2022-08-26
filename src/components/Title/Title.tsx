@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import circle from '../../assets/circle.png';
 
 const Title = styled.h1`
   color: ${({ theme }) => theme.colors.light};

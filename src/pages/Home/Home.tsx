@@ -6,93 +6,7 @@ import Linha from '../../components/Linha';
 import Table from '../../components/Table';
 import Card from '../../components/Card';
 import { City } from '../../types/city';
-
-const cities = [
-  {
-    location: 'Niterói, RJ - Brasil',
-    temperature: 20,
-    weather: 'Nublado',
-    sensation: 19,
-    wind: 18,
-    humidity: 89,
-    capital: false,
-    min: 18,
-    max: 27,
-    name: 'Niterói',
-  },
-  {
-    location: 'Rio de Janeiro, RJ - Brasil',
-    temperature: 20,
-    weather: 'Nublado',
-    sensation: 19,
-    wind: 18,
-    humidity: 89,
-    capital: true,
-    min: 18,
-    max: 27,
-    name: 'Rio de Janeiro',
-  },
-  {
-    location: 'São Paulo, RJ - Brasil',
-    temperature: 20,
-    weather: 'Nublado',
-    sensation: 19,
-    wind: 18,
-    humidity: 89,
-    capital: true,
-    min: 11,
-    max: 22,
-    name: 'São Paulo',
-  },
-  {
-    location: 'São Paulo, RJ - Brasil',
-    temperature: 20,
-    weather: 'Nublado',
-    sensation: 19,
-    wind: 18,
-    humidity: 89,
-    capital: true,
-    min: 11,
-    max: 22,
-    name: 'São Paulo',
-  },
-  {
-    location: 'São Paulo, RJ - Brasil',
-    temperature: 20,
-    weather: 'Nublado',
-    sensation: 19,
-    wind: 18,
-    humidity: 89,
-    capital: true,
-    min: 11,
-    max: 22,
-    name: 'São Paulo',
-  },
-  {
-    location: 'São Paulo, RJ - Brasil',
-    temperature: 20,
-    weather: 'Nublado',
-    sensation: 19,
-    wind: 18,
-    humidity: 89,
-    capital: true,
-    min: 11,
-    max: 22,
-    name: 'São Paulo',
-  },
-  {
-    location: 'São Paulo, RJ - Brasil',
-    temperature: 20,
-    weather: 'Nublado',
-    sensation: 19,
-    wind: 18,
-    humidity: 89,
-    capital: true,
-    min: 11,
-    max: 22,
-    name: 'São Paulo',
-  },
-];
+import getData from '../../api';
 
 const TableWrapper = styled.div`
   display: flex;
@@ -102,6 +16,7 @@ const TableWrapper = styled.div`
 const Home = () => {
   const [selectedCity, setSelectedCity] = React.useState<City | undefined>(undefined);
   const [searchTerm, setSearchTerm] = React.useState('');
+  const [cities, setCities] = React.useState<Array<City>>([]);
   const capitais = cities.filter((city) => city.capital);
   const halfLength = capitais.length / 2;
 
@@ -115,6 +30,13 @@ const Home = () => {
       setSelectedCity(newCity[0]);
     }
   }, [searchTerm]);
+
+  React.useEffect(() => {
+    (async () => {
+      const newCities = await getData();
+      setCities(newCities);
+    })();
+  }, []);
 
   return (
     <div>
